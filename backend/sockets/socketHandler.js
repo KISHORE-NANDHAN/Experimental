@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 const LLM_API_URL = process.env.LLM_API_URL || "http://localhost:8000/generate";
 
@@ -24,4 +24,4 @@ const setupSockets = (io) => {
   });
 };
 
-export default setupSockets;
+module.exports = setupSockets; // Use module.exports instead of export default

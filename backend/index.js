@@ -1,17 +1,17 @@
-import express from "express";
-import http from "http";
-import { Server } from "socket.io";
-import cors from "cors";
-import dotenv from "dotenv";
-import chatbotRoutes from "./routes/chatbot.js";
-import setupSockets from "./sockets/socketHandler.js";
+const express = require("express");
+const http = require("http");
+const { Server } = require("socket.io");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const chatbotRoutes = require("./routes/chatbot");
+const setupSockets = require("./sockets/socketHandler");
 
 dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: "*" }, // Allow all origins for now
+  cors: { origin: "*" },
 });
 
 app.use(cors());
