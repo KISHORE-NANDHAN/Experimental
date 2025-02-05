@@ -1,0 +1,10 @@
+langchain-huggingface
+huggingface_hub
+transformers
+accelerate
+bitsandbytes
+langchain
+torch
+fastapi
+pydantic
+uvicorn
